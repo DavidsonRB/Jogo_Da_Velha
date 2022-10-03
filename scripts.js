@@ -53,7 +53,7 @@ const checkForWin = (currentPlayer) => {
 
 const checkForDraw = () => {
     return [...cellElements].every(cell => {
-        return cell.contains.contains("x") || cell.classList.contains("circle");
+        return cell.classList.contains("x") || cell.classList.contains("circle");
     });
 }
 
@@ -93,7 +93,7 @@ const handleClick = (e) => {
     const isWin = checkForWin(classToAdd);
 
     // Verificar empate
-    const isDraw = checkForWin();
+    const isDraw = checkForDraw();
 
     if (isWin) {
         endGame(false);
